@@ -328,4 +328,7 @@
   <data name="$this.ToolTip" xml:space="preserve">
     <value />
   </data>
+  <data name="label6.Text">
+    <value>低电压计时器</value>
+  </data>
 </root>

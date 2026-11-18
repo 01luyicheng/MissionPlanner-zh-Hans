@@ -1,0 +1,81 @@
+name: Release zh-Hans
+
+# Push a tag like v1.0-zhCN to build and publish a zh-Hans release; manual trigger also supported.
+on:
+  push:
+    tags:
+      - 'v*-zh*'
+  workflow_dispatch:
+
+permissions:
+  contents: write   # gh release create uploads assets
+
+concurrency:
+  group: release-zh-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build Release (zh-Hans)
+    runs-on: windows-latest
+    timeout-minutes: 120
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true          # sln references ExtLibs\mono (public fork, shallow)
+          fetch-depth: 10
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: windows-nuget-${{ hashFiles('**/packages.config', '**/*.csproj') }}
+          restore-keys: windows-nuget-
+
+      # Same build as main.yml; no `nuget locals all -clear` so the cache is usable
+      - name: Build
+        shell: pwsh
+        run: |
+          $msbuildPath = Split-Path (& "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -requires Microsoft.Component.MSBuild -find MSBuild\Current\Bin\amd64\MSBuild.exe | Select-Object -First 1) -Parent
+          $env:PATH = $msbuildPath + ';' + $env:PATH
+          msbuild -v:m -restore -t:Build -p:Configuration=Release MissionPlanner.sln
+
+      # Same packaging as main.yml's Cleanup, with a zh-Hans zip name
+      - name: Cleanup and package
+        shell: pwsh
+        run: |
+          cd bin\Release\net461
+          gci plugins | ForEach-Object {                 if (Test-Path $_.Name -PathType Leaf)                {                    Write-Host "Remove" $_.FullName   ;                 Remove-Item $_.FullName                            } else {                    Write-Host $_.Name                }            }
+
+          copy version.txt ..\..\..\
+          7z a -tzip "..\..\..\MissionPlanner-zhCN-$env:GITHUB_REF_NAME.zip" *
+          cd ..
+          .\md5sum.exe net461 > ..\..\checksums.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: MissionPlanner-zhCN
+          path: bin\Release\net461
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        shell: pwsh
+        run: |
+          $tag = $env:GITHUB_REF_NAME
+          $notes = @"
+          MissionPlanner 简体中文汉化版(非官方构建)
+
+          - 上游:https://github.com/ArduPilot/MissionPlanner
+          - 本仓库在上游基础上完善 zh-Hans 翻译资源,并对硬编码 UI 字符串做了 i18n 改造(L10NU);详见 README.zh-CN.md
+          - 下载 MissionPlanner-zhCN-$tag.zip 解压后运行 MissionPlanner.exe,在配置中把语言设为简体中文即可
+          - 如需自行构建:`git submodule update --init` 后用 Visual Studio 2022 / MSBuild 构建 MissionPlanner.sln
+          "@
+          $notesPath = Join-Path $env:RUNNER_TEMP "release-notes.md"
+          Set-Content -Path $notesPath -Value $notes -Encoding UTF8
+          gh release create $tag `
+            --title "MissionPlanner zh-Hans $tag" `
+            --notes-file $notesPath `
+            "MissionPlanner-zhCN-$tag.zip" checksums.txt version.txt ChangeLog.txt

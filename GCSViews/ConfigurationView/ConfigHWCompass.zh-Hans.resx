@@ -280,4 +280,19 @@
   <data name="groupBoxCompass3.Text" xml:space="preserve">
     <value>指南针 #3</value>
   </data>
+  <data name="but_largemagcal.Text">
+    <value>大型机罗盘校准</value>
+  </data>
+  <data name="groupBoxmpcalib.Text">
+    <value>Mission Planner 罗盘校准</value>
+  </data>
+  <data name="groupBoxonboardcalib.Text">
+    <value>板载罗盘校准</value>
+  </data>
+  <data name="label10.Text">
+    <value>拟合度</value>
+  </data>
+  <data name="label6.Text">
+    <value>校准失败时放宽拟合度要求</value>
+  </data>
 </root>

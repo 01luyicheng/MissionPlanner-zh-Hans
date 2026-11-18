@@ -1040,7 +1040,7 @@ namespace MissionPlanner
 
             if (CurrentState.rateattitudebackup == 0) // initilised to 10, configured above from save
             {
-                CustomMessageBox.Show("NOTE: your attitude rate is 0, the hud will not work\nChange in Configuration > Planner > Telemetry Rates");
+                CustomMessageBox.Show(L10NU.GetString("NOTE: your attitude rate is 0, the hud will not work", "NOTE: your attitude rate is 0, the hud will not work") + "\n" + L10NU.GetString("Change in Configuration > Planner > Telemetry Rates", "Change in Configuration > Planner > Telemetry Rates"));
             }
 
             // create log dir if it doesnt exist
@@ -1339,14 +1339,14 @@ namespace MissionPlanner
             else
             {
                 var pw = "";
-                if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+                if (InputBox.Show(L10NU.GetString("Enter Password", "Enter Password"), L10NU.GetString("Please enter your password", "Please enter your password"), ref pw, true) ==
                     System.Windows.Forms.DialogResult.OK)
                 {
                     bool ans = Password.ValidatePassword(pw);
 
                     if (ans == false)
                     {
-                        CustomMessageBox.Show("Bad Password", "Bad Password");
+                        CustomMessageBox.Show(L10NU.GetString("Bad Password", "Bad Password"), L10NU.GetString("Bad Password", "Bad Password"));
                     }
                 }
 
@@ -1371,14 +1371,14 @@ namespace MissionPlanner
             else
             {
                 var pw = "";
-                if (InputBox.Show("Enter Password", "Please enter your password", ref pw, true) ==
+                if (InputBox.Show(L10NU.GetString("Enter Password", "Enter Password"), L10NU.GetString("Please enter your password", "Please enter your password"), ref pw, true) ==
                     System.Windows.Forms.DialogResult.OK)
                 {
                     bool ans = Password.ValidatePassword(pw);
 
                     if (ans == false)
                     {
-                        CustomMessageBox.Show("Bad Password", "Bad Password");
+                        CustomMessageBox.Show(L10NU.GetString("Bad Password", "Bad Password"), L10NU.GetString("Bad Password", "Bad Password"));
                     }
                 }
 
@@ -1845,7 +1845,7 @@ namespace MissionPlanner
                     log.Warn(ex2);
                 }
 
-                CustomMessageBox.Show($"Can not establish a connection\n\n{ex.Message}");
+                CustomMessageBox.Show(L10NU.GetString("Can not establish a connection", "Can not establish a connection") + "\n\n" + ex.Message);
                 return;
             }
         }
@@ -3756,7 +3756,7 @@ namespace MissionPlanner
                     }
                     else
                     {
-                        CustomMessageBox.Show("Failed to start joystick");
+                        CustomMessageBox.Show(L10NU.GetString("Failed to start joystick", "Failed to start joystick"));
                     }
                 }
 

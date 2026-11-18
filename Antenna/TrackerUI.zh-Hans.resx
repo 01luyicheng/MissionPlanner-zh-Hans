@@ -232,4 +232,16 @@
   <data name="label14.Text" xml:space="preserve">
     <value>中点的PWM</value>
   </data>
+  <data name="label15.Text">
+    <value>速度</value>
+  </data>
+  <data name="label16.Text">
+    <value>加速度</value>
+  </data>
+  <data name="label17.Text">
+    <value>加速度</value>
+  </data>
+  <data name="label18.Text">
+    <value>速度</value>
+  </data>
 </root>

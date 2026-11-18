@@ -1310,4 +1310,10 @@
   <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="$this.Text">
+    <value>SikRadio 配置 1.4 - by Michael Oborne</value>
+  </data>
+  <data name="btnConnect.Text">
+    <value>连接</value>
+  </data>
 </root>

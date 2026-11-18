@@ -344,7 +344,7 @@ namespace MissionPlanner.GCSViews
             }
             catch
             {
-                CustomMessageBox.Show("Please fix your default alt value");
+                CustomMessageBox.Show(L10NU.GetString("Please fix your default alt value", "Please fix your default alt value"));
                 TXT_DefaultAlt.Text = (50 * CurrentState.multiplieralt).ToString("0");
             }
         }
@@ -626,7 +626,7 @@ namespace MissionPlanner.GCSViews
                 else
                 {
                     if (
-                        CustomMessageBox.Show("This will clear your existing points, Continue?", "Confirm",
+                        CustomMessageBox.Show(L10NU.GetString("This will clear your existing points, Continue?", "This will clear your existing points, Continue?"), L10NU.GetString("Confirm", "Confirm"),
                             MessageBoxButtons.OKCancel) != (int) DialogResult.OK)
                     {
                         return;
@@ -660,7 +660,7 @@ namespace MissionPlanner.GCSViews
             if ((altmode) CMB_altmode.SelectedValue == altmode.Absolute)
             {
                 if ((int) DialogResult.No ==
-                    CustomMessageBox.Show("Absolute Alt is selected are you sure?", "Alt Mode",
+                    CustomMessageBox.Show(L10NU.GetString("Absolute Alt is selected are you sure?", "Absolute Alt is selected are you sure?"), L10NU.GetString("Alt Mode", "Alt Mode"),
                         MessageBoxButtons.YesNo))
                 {
                     CMB_altmode.SelectedValue = (int) altmode.Relative;
@@ -679,7 +679,7 @@ namespace MissionPlanner.GCSViews
             }
             catch
             {
-                CustomMessageBox.Show("Your home location is invalid", Strings.ERROR);
+                CustomMessageBox.Show(L10NU.GetString("Your home location is invalid", "Your home location is invalid"), Strings.ERROR);
                 return;
             }
 
@@ -693,7 +693,7 @@ namespace MissionPlanner.GCSViews
                     {
                         if (!double.TryParse(Commands[b, a].Value.ToString(), out answer))
                         {
-                            CustomMessageBox.Show("There are errors in your mission");
+                            CustomMessageBox.Show(L10NU.GetString("There are errors in your mission", "There are errors in your mission"));
                             return;
                         }
                     }
@@ -2202,7 +2202,7 @@ namespace MissionPlanner.GCSViews
             if ((altmode) CMB_altmode.SelectedValue == altmode.Absolute)
             {
                 if ((int) DialogResult.No ==
-                    CustomMessageBox.Show("Absolute Alt is selected are you sure?", "Alt Mode",
+                    CustomMessageBox.Show(L10NU.GetString("Absolute Alt is selected are you sure?", "Absolute Alt is selected are you sure?"), L10NU.GetString("Alt Mode", "Alt Mode"),
                         MessageBoxButtons.YesNo))
                 {
                     CMB_altmode.SelectedValue = (int) altmode.Relative;
@@ -2226,7 +2226,7 @@ namespace MissionPlanner.GCSViews
             }
             catch
             {
-                CustomMessageBox.Show("Your home location is invalid", Strings.ERROR);
+                CustomMessageBox.Show(L10NU.GetString("Your home location is invalid", "Your home location is invalid"), Strings.ERROR);
                 return;
             }
 
@@ -2240,7 +2240,7 @@ namespace MissionPlanner.GCSViews
                     {
                         if (!double.TryParse(Commands[b, a].Value.ToString(), out answer))
                         {
-                            CustomMessageBox.Show("There are errors in your mission");
+                            CustomMessageBox.Show(L10NU.GetString("There are errors in your mission", "There are errors in your mission"));
                             return;
                         }
                     }
@@ -2547,7 +2547,7 @@ namespace MissionPlanner.GCSViews
             catch (Exception ex)
             {
                 log.Error(ex);
-                CustomMessageBox.Show("Map change failed. try zooming out first.");
+                CustomMessageBox.Show(L10NU.GetString("Map change failed. try zooming out first.", "Map change failed. try zooming out first."));
             }
         }
 
@@ -2625,7 +2625,7 @@ namespace MissionPlanner.GCSViews
                 catch (Exception ex)
                 {
                     log.Error(ex);
-                    CustomMessageBox.Show("Invalid Lat/Long, please fix", Strings.ERROR);
+                    CustomMessageBox.Show(L10NU.GetString("Invalid Lat/Long, please fix", "Invalid Lat/Long, please fix"), Strings.ERROR);
                 }
             }
 
@@ -7116,7 +7116,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             // altitude
             string alt = CurrentState.AltUnit == "m" ? "10" : "30"; ;
 
-            if (DialogResult.Cancel == InputBox.Show("Altitude", "Please enter your takeoff altitude in " + CurrentState.AltUnit, ref alt))
+            if (DialogResult.Cancel == InputBox.Show(L10NU.GetString("Altitude", "Altitude"), string.Format(L10NU.GetString("Please enter your takeoff altitude in {0}", "Please enter your takeoff altitude in {0}"), CurrentState.AltUnit), ref alt))
                 return;
 
             int alti = -1;
@@ -7146,7 +7146,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 }
                 if (!skipPitch)
                 {
-                    if (DialogResult.Cancel == InputBox.Show("Takeoff Pitch", "Please enter your takeoff pitch", ref top))
+                    if (DialogResult.Cancel == InputBox.Show(L10NU.GetString("Takeoff Pitch", "Takeoff Pitch"), L10NU.GetString("Please enter your takeoff pitch", "Please enter your takeoff pitch"), ref top))
                         return;
 
                     if (!int.TryParse(top, out topi))
@@ -8513,7 +8513,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             MethodInvoker m = delegate
             {
-                lbl_status.Text = "Status: loaded tiles";
+                lbl_status.Text = L10NU.GetString("Status: loaded tiles", "Status: loaded tiles");
 
                 //panelMenu.Text = "Menu, last load in " + MainMap.ElapsedMilliseconds + "ms";
 
@@ -8531,7 +8531,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
         private void MainMap_OnTileLoadStart()
         {
-            MethodInvoker m = delegate { lbl_status.Text = "Status: loading tiles..."; };
+            MethodInvoker m = delegate { lbl_status.Text = L10NU.GetString("Status: loading tiles...", "Status: loading tiles..."); };
             try
             {
                 if (IsHandleCreated) BeginInvoke(m);

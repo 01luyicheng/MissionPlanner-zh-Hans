@@ -699,7 +699,7 @@ namespace MissionPlanner.Utilities
                     catch (IOException ex)
                     {
                         log.Error(ex);
-                        CustomMessageBox.Show("lost communication with the board.", "lost comms");
+                        CustomMessageBox.Show(L10NU.GetString("lost communication with the board.", "lost communication with the board."), L10NU.GetString("lost comms", "lost comms"));
                         uploader.close();
                         result = false;
                         return false;
@@ -707,7 +707,7 @@ namespace MissionPlanner.Utilities
                     catch (TimeoutException ex)
                     {
                         log.Error(ex);
-                        CustomMessageBox.Show("lost communication with the board.", "comms timeout");
+                        CustomMessageBox.Show(L10NU.GetString("lost communication with the board.", "lost communication with the board."), L10NU.GetString("comms timeout", "comms timeout"));
                         uploader.close();
                         result = false;
                         return false;
@@ -965,9 +965,9 @@ namespace MissionPlanner.Utilities
                     {
                         //VR boards have no tone alarm
                         if (up.board_type == 1140)
-                            CustomMessageBox.Show("Upload complete! Please unplug and reconnect board.");
+                            CustomMessageBox.Show(L10NU.GetString("Upload complete! Please unplug and reconnect board.", "Upload complete! Please unplug and reconnect board."));
                         else
-                            CustomMessageBox.Show("Upload complete!");
+                            CustomMessageBox.Show(L10NU.GetString("Upload complete!", "Upload complete!"));
                     }
                     else
                     {

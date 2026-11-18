@@ -353,4 +353,19 @@
   <data name="label42.Text" xml:space="preserve">
     <value>请设置通道7为相机触发器</value>
   </data>
+  <data name="label15.Text">
+    <value>水平旋转</value>
+  </data>
+  <data name="label43.Text">
+    <value>类型</value>
+  </data>
+  <data name="label44.Text">
+    <value>注意：云台类型将在飞控下次重启后生效</value>
+  </data>
+  <data name="label5.Text">
+    <value>俯仰</value>
+  </data>
+  <data name="label6.Text">
+    <value>横滚</value>
+  </data>
 </root>
