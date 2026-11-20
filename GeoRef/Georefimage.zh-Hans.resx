@@ -130,7 +130,7 @@
     <value>丢弃末端图像</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
-    <value>精度</value>
+    <value>最小快门速度 (s) (CAM)</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>秒偏移</value>
