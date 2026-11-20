@@ -6,12 +6,17 @@ on:
     tags:
       - 'v*-zh*'
   workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing tag to build and release (optional on push)'
+        required: false
+        type: string
 
 permissions:
   contents: write   # gh release create uploads assets
 
 concurrency:
-  group: release-zh-${{ github.ref_name }}
+  group: release-zh-${{ github.event.inputs.tag || github.ref_name }}
   cancel-in-progress: false
 
 jobs:
@@ -43,13 +48,16 @@ jobs:
 
       # Same packaging as main.yml's Cleanup, with a zh-Hans zip name
       - name: Cleanup and package
+        env:
+          TAG_INPUT: ${{ github.event.inputs.tag }}
         shell: pwsh
         run: |
+          $tag = if ($env:TAG_INPUT -and $env:TAG_INPUT -ne "") { $env:TAG_INPUT } else { $env:GITHUB_REF_NAME }
           cd bin\Release\net461
           gci plugins | ForEach-Object {                 if (Test-Path $_.Name -PathType Leaf)                {                    Write-Host "Remove" $_.FullName   ;                 Remove-Item $_.FullName                            } else {                    Write-Host $_.Name                }            }
 
           copy version.txt ..\..\..\
-          7z a -tzip "..\..\..\MissionPlanner-zhCN-$env:GITHUB_REF_NAME.zip" *
+          7z a -tzip "..\..\..\MissionPlanner-zhCN-$tag.zip" *
           cd ..
           .\md5sum.exe net461 > ..\..\checksums.txt
 
@@ -62,9 +70,10 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          TAG_INPUT: ${{ github.event.inputs.tag }}
         shell: pwsh
         run: |
-          $tag = $env:GITHUB_REF_NAME
+          $tag = if ($env:TAG_INPUT -and $env:TAG_INPUT -ne "") { $env:TAG_INPUT } else { $env:GITHUB_REF_NAME }
           $notes = @"
           MissionPlanner 简体中文汉化版(非官方构建)
 
