@@ -75,7 +75,12 @@ jobs:
           "@
           $notesPath = Join-Path $env:RUNNER_TEMP "release-notes.md"
           Set-Content -Path $notesPath -Value $notes -Encoding UTF8
-          gh release create $tag `
-            --title "MissionPlanner zh-Hans $tag" `
-            --notes-file $notesPath `
-            "MissionPlanner-zhCN-$tag.zip" checksums.txt version.txt ChangeLog.txt
+          $assets = @("MissionPlanner-zhCN-$tag.zip", "checksums.txt", "version.txt", "ChangeLog.txt")
+          if (gh release view $tag 2>$null) {
+            gh release upload $tag $assets --clobber
+          } else {
+            gh release create $tag `
+              --title "MissionPlanner zh-Hans $tag" `
+              --notes-file $notesPath `
+              $assets
+          }
