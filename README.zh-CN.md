@@ -26,6 +26,22 @@
 1. 下载 [Releases](../../releases) 中的 `MissionPlanner-zhCN-*.zip` 并解压,运行 `MissionPlanner.exe`(需 .NET Framework 4.7.2,Windows)。
 2. 菜单 `配置(Configuration) → Planner`,将 Language 设为 **简体中文(zh-Hans)**,重启后生效。
 
+## 与上游同步
+
+本 fork 基于上游 master 的某个快照,并直接修改了上游文件,合并上游时会有预期内的冲突:
+
+- 易冲突点:`GCSViews/FlightData.cs`、`GCSViews/FlightPlanner.cs`、`MainV2.cs`、`GCSViews/ConfigurationView/Config*.cs`(做过 L10NU 包裹)、`ExtLibs/Utilities/Properties/Resources.resx`(编码修复),以及各 `*.zh-Hans.resx`(上游会随翻译更新重写)。
+- 同步流程:`git fetch origin && git rebase origin/master`。
+- resx 冲突的处理原则:保留本地中文条目,合并上游新增的控件条目;冲突面大时以上游版本为基础重放本地条目。
+
+## 覆盖现状(诚实声明)
+
+汉化尚未 100% 覆盖,遇到英文界面属于正常回退:
+
+- 约 102 个窗体/控件资源完全没有 zh-Hans 文件,其中可见度较高的有:`Controls/PrearmStatus`(解锁前检查)、`Controls/EKFStatus`(EKF 状态)、`Controls/Vibration`(振动)、`Controls/PreFlight/CheckListControl`(飞行前检查单)、`Controls/Video`、`Controls/MAVLinkInspector` 等。
+- 已翻译文件内仍有约 200 条用户可见文本回退英文,主要集中在:`Radio/Sikradio`(约 51 条)、`ConfigArducopter`(约 30 条)、`ConfigArduplane`(约 21 条)、`GCSViews/FlightData`(约 18 条)、`Antenna/TrackerUI`(约 13 条)、`ConfigHWCompass`(约 10 条)。
+- 欢迎按上述清单补充翻译(复制同名 `.resx` 中对应的 `<data>` 条目到 `.zh-Hans.resx` 即可开始)。
+
 ## 构建
 
 ```bat
