@@ -197,7 +197,7 @@
     <value>在低油门pwm时启用故障保护</value>
   </data>
   <data name="mavlinkComboBox_fs_thr_enable.ToolTip" xml:space="preserve">
-    <value>触发器油门Pwm</value>
+    <value>低 PWM 时触发故障保护</value>
   </data>
   <data name="mavlinkComboBoxfs_batt_enable.ToolTip" xml:space="preserve">
     <value />
