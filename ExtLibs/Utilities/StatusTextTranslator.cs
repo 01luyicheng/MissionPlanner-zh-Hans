@@ -33,6 +33,15 @@ namespace MissionPlanner.Utilities
         {
             get
             {
+                // Settings["language"] is the user's explicit pick and is updated live by
+                // MainV2.changelanguage(); the rx thread's CurrentUICulture is captured at
+                // SerialReader start and goes stale on a mid-session language switch, which
+                // would delay translated STATUSTEXT until reconnect. Prefer the live setting
+                // and fall back to the thread culture when the user never picked a language.
+                var lang = Settings.Instance["language"]?.ToString();
+                if (!string.IsNullOrEmpty(lang))
+                    return lang == "zh-CN" || lang == "zh-Hans";
+
                 switch (CultureInfo.CurrentUICulture.Name)
                 {
                     case "zh-CN":
