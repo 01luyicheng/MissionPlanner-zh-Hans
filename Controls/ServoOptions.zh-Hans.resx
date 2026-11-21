@@ -132,4 +132,13 @@
   <data name="renameToolStripMenuItem.Text">
     <value>重命名</value>
   </data>
+  <data name="TXT_pwm_low.Text" xml:space="preserve">
+    <value>1100</value>
+  </data>
+  <data name="TXT_pwm_high.Text" xml:space="preserve">
+    <value>1900</value>
+  </data>
+  <data name="TXT_rcchannel.Text" xml:space="preserve">
+    <value>5</value>
+  </data>
 </root>

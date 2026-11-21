@@ -221,4 +221,7 @@
   <data name="chk_write.Text">
     <value>写入权限</value>
   </data>
+  <data name="CMB_baudrate.Items" xml:space="preserve">
+    <value>4800</value>
+  </data>
 </root>

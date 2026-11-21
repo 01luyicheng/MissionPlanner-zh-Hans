@@ -386,4 +386,28 @@
   <data name="label9.Text">
     <value>不活动飞行器显示样式</value>
   </data>
+  <data name="CMB_ratesensors.Items" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>HUD</value>
+  </data>
+  <data name="CMB_raterc.Items" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="CMB_ratestatus.Items" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="CMB_rateposition.Items" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="CMB_rateattitude.Items" xml:space="preserve">
+    <value>-1</value>
+  </data>
+  <data name="chk_ADSB.Text" xml:space="preserve">
+    <value>ADSB</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>地面站 ID</value>
+  </data>
 </root>

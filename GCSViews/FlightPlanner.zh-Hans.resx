@@ -966,4 +966,55 @@
   <data name="zoomToVehicleToolStripMenuItem.Text">
     <value>缩放到飞行器</value>
   </data>
+  <data name="TXT_WPRad.Text" xml:space="preserve">
+    <value>30</value>
+  </data>
+  <data name="TXT_DefaultAlt.Text" xml:space="preserve">
+    <value>100</value>
+  </data>
+  <data name="TXT_loiterrad.Text" xml:space="preserve">
+    <value>45</value>
+  </data>
+  <data name="chk_usemavftp.Text" xml:space="preserve">
+    <value>MAVFTP</value>
+  </data>
+  <data name="but_mincommands.Text" xml:space="preserve">
+    <value>˅</value>
+  </data>
+  <data name="TXT_altwarn.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="Param1.HeaderText" xml:space="preserve">
+    <value>P1</value>
+  </data>
+  <data name="Param2.HeaderText" xml:space="preserve">
+    <value>P2</value>
+  </data>
+  <data name="Param3.HeaderText" xml:space="preserve">
+    <value>P3</value>
+  </data>
+  <data name="Param4.HeaderText" xml:space="preserve">
+    <value>P4</value>
+  </data>
+  <data name="MGRS.HeaderText" xml:space="preserve">
+    <value>MGRS</value>
+  </data>
+  <data name="TagData.HeaderText" xml:space="preserve">
+    <value>TagData</value>
+  </data>
+  <data name="BUT_verifyheight.ToolTip" xml:space="preserve">
+    <value>根据地形数据重新计算勾选行的高度（Alt），方式与“校验高度”设置新航点时相同（默认高度为离地高度，按各行所选坐标系）。勾选列标题中的复选框可对全部行执行。</value>
+  </data>
+  <data name="lbl_wpfile.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="Zoomlevel.ToolTip" xml:space="preserve">
+    <value>更改缩放级别</value>
+  </data>
+  <data name="toolStripMenuItem3.Text" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="testToolStripMenuItem.Text" xml:space="preserve">
+    <value>测试</value>
+  </data>
 </root>

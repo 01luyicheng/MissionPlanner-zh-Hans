@@ -827,4 +827,160 @@
   <data name="dlgOpen.Filter" xml:space="preserve">
     <value>INI 文件|*.ini</value>
   </data>
+  <data name="RMAX_WINDOW.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RMAX_FREQ.Items" xml:space="preserve">
+    <value>902000</value>
+  </data>
+  <data name="RNUM_CHANNELS.Items" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="RDUTY_CYCLE.Items" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="RLBT_RSSI.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RMIN_FREQ.Items" xml:space="preserve">
+    <value>902000</value>
+  </data>
+  <data name="RSERIAL_SPEED.Items" xml:space="preserve">
+    <value>115</value>
+  </data>
+  <data name="RAIR_SPEED.Items" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="RNETID.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="RTXPOWER.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="MAX_WINDOW.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MAX_FREQ.Items" xml:space="preserve">
+    <value>902000</value>
+  </data>
+  <data name="NUM_CHANNELS.Items" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="LBT_RSSI.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="MIN_FREQ.Items" xml:space="preserve">
+    <value>902000</value>
+  </data>
+  <data name="DUTY_CYCLE.Items" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="MAVLINK.ToolTip" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="SERIAL_SPEED.Items" xml:space="preserve">
+    <value>115</value>
+  </data>
+  <data name="AIR_SPEED.Items" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="NETID.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="TXPOWER.Items" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="ENCRYPTION_LEVEL.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="RENCRYPTION_LEVEL.Items" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>RSSI</value>
+  </data>
+  <data name="lblGPO1_3AUXOUT.Text" xml:space="preserve">
+    <value>GPO1_3AUXOUT</value>
+  </data>
+  <data name="lblGPI1_2AUXIN.Text" xml:space="preserve">
+    <value>GPI1_2AUXIN</value>
+  </data>
+  <data name="lblGPIO1_1FUNC.Text" xml:space="preserve">
+    <value>GPIO1_1FUNC</value>
+  </data>
+  <data name="lblGPO1_0TXEN485.Text" xml:space="preserve">
+    <value>GPO1_0TXEN485</value>
+  </data>
+  <data name="lblGPO1_3STATLED.Text" xml:space="preserve">
+    <value>GPO1_3STATLED</value>
+  </data>
+  <data name="lblSBUSOUT.Text" xml:space="preserve">
+    <value>GPO1_3SBUSOUT:</value>
+  </data>
+  <data name="lblSBUSIN.Text" xml:space="preserve">
+    <value>GPO1_3SBUSIN</value>
+  </data>
+  <data name="lblRX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>RXENCAP</value>
+  </data>
+  <data name="lblTX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>TXENCAP</value>
+  </data>
+  <data name="lblGPO1_1R_COUT.Text" xml:space="preserve">
+    <value>GPO1_1R/COUT</value>
+  </data>
+  <data name="lblGPI1_1R_CIN.Text" xml:space="preserve">
+    <value>GPI1_1R/CIN</value>
+  </data>
+  <data name="lblECC.Text" xml:space="preserve">
+    <value>ECC</value>
+  </data>
+  <data name="lblMAVLINK.Text" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="lblRTSCTS.Text" xml:space="preserve">
+    <value>RTS CTS</value>
+  </data>
+  <data name="lblRGPO1_3AUXOUT.Text" xml:space="preserve">
+    <value>GPO1_3AUXOUT</value>
+  </data>
+  <data name="lblRGPI1_2AUXIN.Text" xml:space="preserve">
+    <value>GPI1_2AUXIN</value>
+  </data>
+  <data name="lblRGPIO1_1FUNC.Text" xml:space="preserve">
+    <value>GPIO1_1FUNC</value>
+  </data>
+  <data name="lblRGPO1_0TXEN485.Text" xml:space="preserve">
+    <value>GPO1_0TXEN485</value>
+  </data>
+  <data name="lblRGPO1_3STATLED.Text" xml:space="preserve">
+    <value>GPO1_3STATLED</value>
+  </data>
+  <data name="lblRSBUSOUT.Text" xml:space="preserve">
+    <value>GPO1_3SBUSOUT:</value>
+  </data>
+  <data name="lblRSBUSIN.Text" xml:space="preserve">
+    <value>GPO1_3SBUSIN</value>
+  </data>
+  <data name="lblRRX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>RXENCAP</value>
+  </data>
+  <data name="lblRTX_ENCAP_METHOD.Text" xml:space="preserve">
+    <value>TXENCAP</value>
+  </data>
+  <data name="lblRGPO1_1R_COUT.Text" xml:space="preserve">
+    <value>GPO1_1R/COUT</value>
+  </data>
+  <data name="lblRGPI1_1R_CIN.Text" xml:space="preserve">
+    <value>GPI1_1R/CIN</value>
+  </data>
+  <data name="lblRMAVLINK.Text" xml:space="preserve">
+    <value>Mavlink</value>
+  </data>
+  <data name="lblRECC.Text" xml:space="preserve">
+    <value>ECC</value>
+  </data>
+  <data name="lblRRTSCTS.Text" xml:space="preserve">
+    <value>RTS CTS</value>
+  </data>
 </root>

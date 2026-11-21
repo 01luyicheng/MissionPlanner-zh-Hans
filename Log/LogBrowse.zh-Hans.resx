@@ -162,4 +162,19 @@
   <data name="exportVisibleToolStripMenuItem.Text">
     <value>导出可见行</value>
   </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>GPSB</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>POS</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>GPS2</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>GPS</value>
+  </data>
+  <data name="chk_msg.Text" xml:space="preserve">
+    <value>MSG</value>
+  </data>
 </root>

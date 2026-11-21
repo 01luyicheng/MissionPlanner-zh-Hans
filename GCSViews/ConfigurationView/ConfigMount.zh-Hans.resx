@@ -368,4 +368,25 @@
   <data name="label6.Text">
     <value>横滚</value>
   </data>
+  <data name="LNK_wiki.Text" xml:space="preserve">
+    <value>Wiki</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="label28.Text" xml:space="preserve">
+    <value>Z</value>
+  </data>
+  <data name="label29.Text" xml:space="preserve">
+    <value>Y</value>
+  </data>
+  <data name="label30.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
 </root>

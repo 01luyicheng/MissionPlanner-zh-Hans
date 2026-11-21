@@ -295,4 +295,34 @@
   <data name="label6.Text">
     <value>校准失败时放宽拟合度要求</value>
   </data>
+  <data name="label9.Text" xml:space="preserve">
+    <value>罗盘 3</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>罗盘 2</value>
+  </data>
+  <data name="label7.Text" xml:space="preserve">
+    <value>罗盘 1</value>
+  </data>
+  <data name="LBL_compass1_mot.Text" xml:space="preserve">
+    <value>MOT</value>
+  </data>
+  <data name="LBL_compass1_offset.Text" xml:space="preserve">
+    <value>OFFSET</value>
+  </data>
+  <data name="LBL_compass2_mot.Text" xml:space="preserve">
+    <value>MOT</value>
+  </data>
+  <data name="LBL_compass2_offset.Text" xml:space="preserve">
+    <value>OFFSET</value>
+  </data>
+  <data name="LBL_compass3_mot.Text" xml:space="preserve">
+    <value>MOT</value>
+  </data>
+  <data name="LBL_compass3_offset.Text" xml:space="preserve">
+    <value>OFFSET</value>
+  </data>
+  <data name="buttonQuickPixhawk.Text" xml:space="preserve">
+    <value>Pixhawk/PX4</value>
+  </data>
 </root>

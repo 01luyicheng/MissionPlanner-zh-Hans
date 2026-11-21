@@ -129,4 +129,7 @@
   <data name="renameToolStripMenuItem.Text">
     <value>重命名</value>
   </data>
+  <data name="TXT_rcchannel.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

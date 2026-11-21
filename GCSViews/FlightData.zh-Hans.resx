@@ -780,4 +780,58 @@
   <data name="openScriptDialog.Filter" xml:space="preserve">
     <value>Python 文件|*.py|所有文件|*.*</value>
   </data>
+  <data name="CMB_setwp.Items" xml:space="preserve">
+    <value>0 (Home)</value>
+  </data>
+  <data name="NACp_lbl.Text" xml:space="preserve">
+    <value>NACp</value>
+  </data>
+  <data name="NIC_lbl.Text" xml:space="preserve">
+    <value>NIC</value>
+  </data>
+  <data name="IDENT_btn.Text" xml:space="preserve">
+    <value>IDENT</value>
+  </data>
+  <data name="ALT_btn.Text" xml:space="preserve">
+    <value>ALT</value>
+  </data>
+  <data name="STBY_btn.Text" xml:space="preserve">
+    <value>STBY</value>
+  </data>
+  <data name="ON_btn.Text" xml:space="preserve">
+    <value>ON</value>
+  </data>
+  <data name="Mode_clb.Items" xml:space="preserve">
+    <value>Mode A</value>
+  </data>
+  <data name="BUT_speed10.Text" xml:space="preserve">
+    <value>10x</value>
+  </data>
+  <data name="BUT_speed5.Text" xml:space="preserve">
+    <value>5x</value>
+  </data>
+  <data name="BUT_speed2.Text" xml:space="preserve">
+    <value>2x</value>
+  </data>
+  <data name="BUT_speed1.Text" xml:space="preserve">
+    <value>1x</value>
+  </data>
+  <data name="BUT_speed1_2.Text" xml:space="preserve">
+    <value>0.5</value>
+  </data>
+  <data name="BUT_speed1_4.Text" xml:space="preserve">
+    <value>0.25</value>
+  </data>
+  <data name="BUT_speed1_10.Text" xml:space="preserve">
+    <value>0.1</value>
+  </data>
+  <data name="lbl_playbackspeed.Text" xml:space="preserve">
+    <value>x 1.0</value>
+  </data>
+  <data name="lbl_logpercent.Text" xml:space="preserve">
+    <value>0.00 %</value>
+  </data>
+  <data name="lbl_hdop.Text" xml:space="preserve">
+    <value>hdop: 0</value>
+  </data>
 </root>

@@ -222,4 +222,19 @@
   <data name="label23.Text">
     <value>刹车</value>
   </data>
+  <data name="label24.Text" xml:space="preserve">
+    <value>FF</value>
+  </data>
+  <data name="label21.Text" xml:space="preserve">
+    <value>RC7 选项</value>
+  </data>
+  <data name="label25.Text" xml:space="preserve">
+    <value>RC8 选项</value>
+  </data>
+  <data name="label26.Text" xml:space="preserve">
+    <value>RC9 选项</value>
+  </data>
+  <data name="label27.Text" xml:space="preserve">
+    <value>RC10 选项</value>
+  </data>
 </root>

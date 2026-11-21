@@ -267,4 +267,7 @@
   <data name="label2.Text" xml:space="preserve">
     <value>仿真速度</value>
   </data>
+  <data name="cmb_model.Items" xml:space="preserve">
+    <value />
+  </data>
 </root>

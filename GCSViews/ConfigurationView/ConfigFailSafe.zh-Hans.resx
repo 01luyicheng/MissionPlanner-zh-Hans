@@ -331,4 +331,7 @@
   <data name="label6.Text">
     <value>低电压计时器</value>
   </data>
+  <data name="LNK_wiki.Text" xml:space="preserve">
+    <value>Wiki</value>
+  </data>
 </root>

@@ -204,4 +204,16 @@
   <data name="lbldrpstart.Text">
     <value>开头丢弃的图像数</value>
   </data>
+  <data name="label11.Text" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="label12.Text" xml:space="preserve">
+    <value>&gt;&gt;</value>
+  </data>
+  <data name="txt_basealt.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TXT_shutterLag.Text" xml:space="preserve">
+    <value>0</value>
+  </data>
 </root>

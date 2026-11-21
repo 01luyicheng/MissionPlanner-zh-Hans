@@ -217,4 +217,7 @@
   <data name="backstageViewPageinstfw.Text">
     <value>安装固件</value>
   </data>
+  <data name="backstageViewPageosd.Text" xml:space="preserve">
+    <value>OSD</value>
+  </data>
 </root>
