@@ -854,4 +854,46 @@ Mission Planner将会在30秒内寻找控制板。</value>
   <data name="FirmwareSelectionPickFile" xml:space="preserve">
     <value>请选择要下载并上传的文件（.apj）</value>
   </data>
+  <data name="Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="Absolute" xml:space="preserve">
+    <value>绝对高度</value>
+  </data>
+  <data name="Relative" xml:space="preserve">
+    <value>相对高度</value>
+  </data>
+  <data name="Terrain" xml:space="preserve">
+    <value>地形高度</value>
+  </data>
+  <data name="ForceArmDisarmWarning" xml:space="preserve">
+    <value>{0} 失败。
+{1}
+强制{0}可绕过安全检查，
+可能导致载具坠毁
+并造成严重人身伤害。
+
+是否要强制{0}？</value>
+  </data>
+  <data name="AreaResult" xml:space="preserve">
+    <value>面积：{0} m2
+	{1} 英亩
+	{2} 公顷
+	{3} 平方英尺</value>
+  </data>
+  <data name="MagOffsetsSaved" xml:space="preserve">
+    <value>罗盘 #{0} 的新偏移量为 {1} {2} {3}，
+已为你保存。</value>
+  </data>
+  <data name="MagOffsetsManual" xml:space="preserve">
+    <value>罗盘 #{0} 的新偏移量为 {1} {2} {3}，
+
+请记录下来以便手动输入。</value>
+  </data>
+  <data name="MagOffsetsTitle" xml:space="preserve">
+    <value>磁力计新偏移量</value>
+  </data>
 </root>

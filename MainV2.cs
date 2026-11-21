@@ -892,7 +892,7 @@ namespace MissionPlanner
             catch (Exception e)
             {
                 log.Fatal(e);
-                CustomMessageBox.Show($"A Major error has occured : {e}");
+                CustomMessageBox.Show(string.Format(L10NU.GetString("A Major error has occured : {0}", "A Major error has occured : {0}"), e));
                 Application.Exit();
             }
 
@@ -1074,7 +1074,7 @@ namespace MissionPlanner
 
                     if (Framework < 4.0)
                     {
-                        CustomMessageBox.Show("This program requires .NET Framework 4.0. You currently have " + Framework);
+                        CustomMessageBox.Show(string.Format(L10NU.GetString("This program requires .NET Framework 4.0. You currently have {0}", "This program requires .NET Framework 4.0. You currently have {0}"), Framework));
                     }
                 }
                 catch (Exception ex)
@@ -2867,8 +2867,8 @@ namespace MissionPlanner
                                         (Action)
                                         delegate
                                         {
-                                            CustomMessageBox.Show("Failed to update home location (" +
-                                                                  MainV2.comPort.MAV.sysid + ")");
+                                            CustomMessageBox.Show(string.Format(L10NU.GetString("Failed to update home location ({0})", "Failed to update home location ({0})"),
+                                                                  MainV2.comPort.MAV.sysid));
                                         });
                                 }
                             });
@@ -3382,7 +3382,7 @@ namespace MissionPlanner
                         if (!GStreamer.GstLaunchExists)
                         {
                             if (CustomMessageBox.Show(
-                                    "A video stream has been detected, but gstreamer has not been configured/installed.\nDo you want to install/config it now?",
+                                    L10NU.GetString("A video stream has been detected, but gstreamer has not been configured/installed.", "A video stream has been detected, but gstreamer has not been configured/installed.") + "\n" + L10NU.GetString("Do you want to install/config it now?", "Do you want to install/config it now?"),
                                     "GStreamer", System.Windows.Forms.MessageBoxButtons.YesNo) ==
                                 (int) System.Windows.Forms.DialogResult.Yes)
                             {
@@ -3534,8 +3534,11 @@ namespace MissionPlanner
                                 ExtraConnectionList.Add(new AutoConnect.ConnectionInfo("ZeroConf " + zeroconfHost.DisplayName, false, port, AutoConnect.ProtocolType.Udp, AutoConnect.ConnectionFormat.MAVLink, AutoConnect.Direction.Outbound, ip));
 
                             if (CustomMessageBox.Show(
-                                    "A Mavlink stream has been detected, " + zeroconfHost.DisplayName + "(" +
-                                    zeroconfHost.Id + "). Would you like to connect to it?",
+                                    string.Format(
+                                        L10NU.GetString(
+                                            "A Mavlink stream has been detected, {0}({1}). Would you like to connect to it?",
+                                            "A Mavlink stream has been detected, {0}({1}). Would you like to connect to it?"),
+                                        zeroconfHost.DisplayName, zeroconfHost.Id),
                                     "Mavlink", System.Windows.Forms.MessageBoxButtons.YesNo) ==
                                 (int) System.Windows.Forms.DialogResult.Yes)
                             {
@@ -3807,7 +3810,7 @@ namespace MissionPlanner
                     if (!GStreamer.GstLaunchExists)
                     {
                         if (CustomMessageBox.Show(
-                                "A video stream has been detected, but gstreamer has not been configured/installed.\nDo you want to install/config it now?",
+                                L10NU.GetString("A video stream has been detected, but gstreamer has not been configured/installed.", "A video stream has been detected, but gstreamer has not been configured/installed.") + "\n" + L10NU.GetString("Do you want to install/config it now?", "Do you want to install/config it now?"),
                                 "GStreamer", System.Windows.Forms.MessageBoxButtons.YesNo) ==
                             (int) System.Windows.Forms.DialogResult.Yes)
                         {
