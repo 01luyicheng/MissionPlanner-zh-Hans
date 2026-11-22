@@ -38,6 +38,11 @@ jobs:
           key: windows-nuget-${{ hashFiles('**/packages.config', '**/*.csproj') }}
           restore-keys: windows-nuget-
 
+      # i18n regression gate: fails the release if zh-Hans coverage regressed
+      - name: i18n regression gate
+        shell: pwsh
+        run: python tools/i18n/check_zhhans.py
+
       # Same build as main.yml; no `nuget locals all -clear` so the cache is usable
       - name: Build
         shell: pwsh
