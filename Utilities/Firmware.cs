@@ -126,7 +126,7 @@ namespace MissionPlanner.Utilities
 
             if (!File.Exists(file))
             {
-                //CustomMessageBox.Show("Missing FirmwareHistory.txt file");
+                //CustomMessageBox.Show(L10NU.GetString("Missing FirmwareHistory.txt file", "Missing FirmwareHistory.txt file"));
                 return;
             }
 
@@ -230,7 +230,7 @@ namespace MissionPlanner.Utilities
                 catch (Exception ex)
                 {
                     log.Error(ex);
-                    //CustomMessageBox.Show("Failed to get Firmware List : " + ex.Message);
+                    //CustomMessageBox.Show(L10NU.GetString("Failed to get Firmware List : ", "Failed to get Firmware List : ") + ex.Message);
                     invalidex = ex;
                 }
             }
@@ -579,7 +579,7 @@ namespace MissionPlanner.Utilities
 
             }
 
-            if (CustomMessageBox.Show("Upload ChibiOS", "ChibiOS", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+            if (CustomMessageBox.Show(L10NU.GetString("Upload ChibiOS", "Upload ChibiOS"), "ChibiOS", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
             {
                 return chibiosurl;
             }
@@ -872,7 +872,7 @@ namespace MissionPlanner.Utilities
                     if (board == BoardDetect.boards.vrbrainv40)
                     {
                         CustomMessageBox.Show(
-                            "VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.\n");
+                            L10NU.GetString("VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.", "VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.") + "\n");
                     }
                 }
                 else
@@ -1003,7 +1003,7 @@ namespace MissionPlanner.Utilities
 
                 if (!ssidFound)
                 {
-                    CustomMessageBox.Show("Please connect to " + vehicleName + " Wifi now and after that press OK", vehicleName, MessageBoxButtons.OK);
+                    CustomMessageBox.Show(string.Format(L10NU.GetString("Please connect to {0} Wifi now and after that press OK", "Please connect to {0} Wifi now and after that press OK"), vehicleName), vehicleName, MessageBoxButtons.OK);
                     ssidFound = isParrotWifiConnected(vehicleName);
                     pingReply = pingParrotVehicle(ping);
                 }
@@ -1012,12 +1012,12 @@ namespace MissionPlanner.Utilities
                 {
                     if (!ssidFound)
                     {
-                        if (CustomMessageBox.Show("You don't seem connected to " + vehicleName + " Wifi. Please connect to it and press OK to try again", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                        if (CustomMessageBox.Show(string.Format(L10NU.GetString("You don't seem connected to {0} Wifi. Please connect to it and press OK to try again", "You don't seem connected to {0} Wifi. Please connect to it and press OK to try again"), vehicleName), vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                         {
                             return false;
                         }
                     }
-                    else if (CustomMessageBox.Show("You seem connected to " + vehicleName + " Wifi but it didn't answer our request. Do you want to try again?", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                    else if (CustomMessageBox.Show(string.Format(L10NU.GetString("You seem connected to {0} Wifi but it didn't answer our request. Do you want to try again?", "You seem connected to {0} Wifi but it didn't answer our request. Do you want to try again?"), vehicleName), vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                     {
                         return false;
                     }
@@ -1043,12 +1043,12 @@ namespace MissionPlanner.Utilities
                         ntimes = "two";
                     }
 
-                    CustomMessageBox.Show("Please press " + vehicleName + " Power button " + ntimes + " times", vehicleName, MessageBoxButtons.OK);
+                    CustomMessageBox.Show(string.Format(L10NU.GetString("Please press {0} Power button {1} times", "Please press {0} Power button {1} times"), vehicleName, ntimes), vehicleName, MessageBoxButtons.OK);
                     response = adbClient.Connect(new DnsEndPoint("192.168.42.1", 9050));
 
                     while (!response.Contains("connected to 192.168.42.1:9050"))
                     {
-                        if (CustomMessageBox.Show("Couldn't contact " + vehicleName + ". Press the Power button " + ntimes + " times. Do you want to try to connect again?", vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
+                        if (CustomMessageBox.Show(string.Format(L10NU.GetString("Couldn't contact {0}. Press the Power button {1} times. Do you want to try to connect again?", "Couldn't contact {0}. Press the Power button {1} times. Do you want to try to connect again?"), vehicleName, ntimes), vehicleName, MessageBoxButtons.OKCancel) == (int)DialogResult.Cancel)
                         {
                             return false;
                         }

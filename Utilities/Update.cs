@@ -703,7 +703,7 @@ namespace MissionPlanner.Utilities
             catch (Exception ex)
             {
                 log.Error(ex.ToString());
-                CustomMessageBox.Show("Error getting Parameter Information");
+                CustomMessageBox.Show(L10NU.GetString("Error getting Parameter Information", "Error getting Parameter Information"));
             }
             */
             #endregion Fetch Parameter Meta Data

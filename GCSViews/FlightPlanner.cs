@@ -2606,7 +2606,7 @@ namespace MissionPlanner.GCSViews
             }
             catch (Exception)
             {
-                CustomMessageBox.Show("Row error");
+                CustomMessageBox.Show(L10NU.GetString("Row error", "Row error"));
             }
         }
 
@@ -4677,7 +4677,7 @@ namespace MissionPlanner.GCSViews
             }
             catch
             {
-                CustomMessageBox.Show("Failed to open url http://127.0.0.1:56781/network.kml");
+                CustomMessageBox.Show(L10NU.GetString("Failed to open url http://127.0.0.1:56781/network.kml", "Failed to open url http://127.0.0.1:56781/network.kml"));
             }
         }
 
@@ -5386,7 +5386,7 @@ namespace MissionPlanner.GCSViews
             RectLatLng area = MainMap.SelectedArea;
             if (area.IsEmpty)
             {
-                var res = CustomMessageBox.Show("No ripp area defined, ripp displayed on screen?", "Rip",
+                var res = CustomMessageBox.Show(L10NU.GetString("No ripp area defined, ripp displayed on screen?", "No ripp area defined, ripp displayed on screen?"), "Rip",
                     MessageBoxButtons.YesNo);
                 if (res == (int) DialogResult.Yes)
                 {
@@ -8576,7 +8576,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             }
             catch (Exception e)
             {
-                CustomMessageBox.Show("Failed to make WMS Server request: " + e.Message);
+                CustomMessageBox.Show(L10NU.GetString("Failed to make WMS Server request: ", "Failed to make WMS Server request: ") + e.Message);
                 return null;
             }
         }
@@ -8596,7 +8596,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             bool bPngCapable = false;
             XmlNodeList getMapElements = xCapabilitesResponse.SelectNodes("//GetMap", nsmgr);
             if (getMapElements.Count != 1)
-                CustomMessageBox.Show("Invalid WMS Server response: Invalid number of GetMap elements.");
+                CustomMessageBox.Show(L10NU.GetString("Invalid WMS Server response: Invalid number of GetMap elements.", "Invalid WMS Server response: Invalid number of GetMap elements."));
             else
             {
                 XmlNode getMapNode = getMapElements.Item(0);
@@ -8614,7 +8614,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
 
             if (!bPngCapable)
             {
-                CustomMessageBox.Show("Invalid WMS Server response: Server unable to return PNG images.");
+                CustomMessageBox.Show(L10NU.GetString("Invalid WMS Server response: Server unable to return PNG images.", "Invalid WMS Server response: Server unable to return PNG images."));
                 return;
             }
 
@@ -8635,7 +8635,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
             if (!bEpsgCapable)
             {
                 CustomMessageBox.Show(
-                    "Invalid WMS Server response: Server unable to return EPSG:4326 / WGS84 compatible images.");
+                    L10NU.GetString("Invalid WMS Server response: Server unable to return EPSG:4326 / WGS84 compatible images.", "Invalid WMS Server response: Server unable to return EPSG:4326 / WGS84 compatible images."));
                 return;
             }
 
@@ -8720,7 +8720,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 MainMap.MapProvider = provider;
                 if (status != GeoCoderStatusCode.G_GEO_SUCCESS)
                 {
-                    CustomMessageBox.Show("Google Maps Geocoder can't find: '" + place + "', reason: " + status,
+                    CustomMessageBox.Show(L10NU.GetString("Google Maps Geocoder can't find: '", "Google Maps Geocoder can't find: '") + place + "', reason: " + status,
                         "GMap.NET", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
                 else
@@ -8885,7 +8885,7 @@ Column 1: Field type (RALLY is the only one at the moment -- may have RALLY_LAND
                 count += item.Value;
             }
             results += Environment.NewLine + Environment.NewLine + count + " tile" + (count > 1 ? "s" : "") + " loaded !";
-            CustomMessageBox.Show("Number of tiles loaded per zoom : " + Environment.NewLine + results, "Injecting Custom Map Results");
+            CustomMessageBox.Show(L10NU.GetString("Number of tiles loaded per zoom : ", "Number of tiles loaded per zoom : ") + Environment.NewLine + results, "Injecting Custom Map Results");
             map.Dispose();
         }
 

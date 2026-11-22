@@ -280,7 +280,7 @@ namespace MissionPlanner.Controls
             GraphPane myPane = zgc.GraphPane;
 
             // Set the titles and axis labels
-            myPane.Title.Text = "Elevation above ground";
+            myPane.Title.Text = L10NU.GetString("Elevation above ground", "Elevation above ground");
             myPane.XAxis.Title.Text = "Distance (" + CurrentState.DistanceUnit + ")";
             myPane.YAxis.Title.Text = "Elevation (" + CurrentState.AltUnit + ")";
 

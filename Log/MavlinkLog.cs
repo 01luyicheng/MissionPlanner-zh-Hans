@@ -38,8 +38,8 @@ namespace MissionPlanner.Log
             zg1.GraphPane.YAxis.Title.IsVisible = false;
             zg1.GraphPane.Y2Axis.Title.Text = "";
             zg1.GraphPane.Title.IsVisible = true;
-            zg1.GraphPane.Title.Text = "Mavlink Log Graph";
-            zg1.GraphPane.XAxis.Title.Text = "Time (sec)";
+            zg1.GraphPane.Title.Text = L10NU.GetString("Mavlink Log Graph", "Mavlink Log Graph");
+            zg1.GraphPane.XAxis.Title.Text = L10NU.GetString("Time (sec)", "Time (sec)");
 
             zg1.GraphPane.XAxis.Type = AxisType.Date;
             zg1.GraphPane.XAxis.Scale.Format = "HH:mm:ss";

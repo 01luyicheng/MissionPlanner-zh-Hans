@@ -106,7 +106,7 @@ namespace MissionPlanner
                 config.SaveToDir("C:\\Temp\\Snapshot");
                 DotTrace.Attach(config);
                 DotTrace.StartCollectingData();
-                CustomMessageBox.Show("Trace started");
+                CustomMessageBox.Show(L10NU.GetString("Trace started", "Trace started"));
             }
             else
             {
@@ -476,9 +476,9 @@ namespace MissionPlanner
                         if (int.Parse(match.Groups[1].Value) < 6)
                         {
                             Console.WriteLine(
-                                "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/");
+                                L10NU.GetString("Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/", "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/"));
                             CustomMessageBox.Show(
-                                "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/");
+                                L10NU.GetString("Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/", "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/"));
                         }
                     }
                 }

@@ -1020,8 +1020,8 @@ namespace MissionPlanner.Log
             GraphPane myPane = zgc.GraphPane;
 
             // Set the titles and axis labels
-            myPane.Title.Text = "Value Graph";
-            myPane.XAxis.Title.Text = "Line Number";
+            myPane.Title.Text = L10NU.GetString("Value Graph", "Value Graph");
+            myPane.XAxis.Title.Text = L10NU.GetString("Line Number", "Line Number");
             myPane.YAxis.Title.Text = "";
             myPane.YAxis.Title.FontSpec.Size += 2;
             myPane.Y2Axis.Title.FontSpec.Size += 2;
@@ -3545,7 +3545,7 @@ main()
             {
                 zg1.GraphPane.XAxis.Type = AxisType.Date;
                 zg1.GraphPane.XAxis.Scale.Format = "HH:mm:ss.fff";
-                zg1.GraphPane.XAxis.Title.Text = "Time (sec)";
+                zg1.GraphPane.XAxis.Title.Text = L10NU.GetString("Time (sec)", "Time (sec)");
                 zg1.GraphPane.XAxis.Scale.MajorUnit = DateUnit.Minute;
                 zg1.GraphPane.XAxis.Scale.MinorUnit = DateUnit.Second;
                 zg1.GraphPane.YAxis.Title.Text = "";
@@ -3557,8 +3557,8 @@ main()
                 zg1.GraphPane.XAxis.Type = AxisType.Linear;
                 zg1.GraphPane.XAxis.Scale.Format = "f0";
                 zg1.GraphPane.XAxis.Scale.MagAuto = false;
-                zg1.GraphPane.Title.Text = "Value Graph";
-                zg1.GraphPane.XAxis.Title.Text = "Line Number";
+                zg1.GraphPane.Title.Text = L10NU.GetString("Value Graph", "Value Graph");
+                zg1.GraphPane.XAxis.Title.Text = L10NU.GetString("Line Number", "Line Number");
                 zg1.GraphPane.YAxis.Title.Text = "";
             }
 

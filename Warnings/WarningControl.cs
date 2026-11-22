@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using MissionPlanner.Utilities;
 
 namespace MissionPlanner.Warnings
 {
@@ -182,7 +183,7 @@ namespace MissionPlanner.Warnings
             this.CB_type.Name = "cbType";
             this.CB_type.Size = new System.Drawing.Size(122, 17);
             this.CB_type.TabIndex = 7;
-            this.CB_type.Text = "QuickPanel Coloring";
+            this.CB_type.Text = L10NU.GetString("QuickPanel Coloring", "QuickPanel Coloring");
             this.CB_type.UseVisualStyleBackColor = true;
             this.CB_type.CheckedChanged += new System.EventHandler(this.CB_type_CheckedChanged);
             //

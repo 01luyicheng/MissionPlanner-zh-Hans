@@ -610,9 +610,9 @@ namespace MissionPlanner.GCSViews
             GraphPane myPane = zgc.GraphPane;
 
             // Set the titles and axis labels
-            myPane.Title.Text = "Tuning - Double click to change items";
-            myPane.XAxis.Title.Text = "Time (s)";
-            myPane.YAxis.Title.Text = "Unit";
+            myPane.Title.Text = L10NU.GetString("Tuning - Double click to change items", "Tuning - Double click to change items");
+            myPane.XAxis.Title.Text = L10NU.GetString("Time (s)", "Time (s)");
+            myPane.YAxis.Title.Text = L10NU.GetString("Unit", "Unit");
             myPane.YAxis.Title.FontSpec.Size += 2;
 
             // Show the x axis grid
@@ -827,7 +827,7 @@ namespace MissionPlanner.GCSViews
             }
             else
             {
-                CustomMessageBox.Show("Please select a valid script", "Bad Script");
+                CustomMessageBox.Show(L10NU.GetString("Please select a valid script", "Please select a valid script"), "Bad Script");
             }
         }
 
@@ -3320,7 +3320,7 @@ namespace MissionPlanner.GCSViews
             if(hud1.Parent == SubMainLeft.Panel1)
                 SubMainLeft.Panel1Collapsed = true;
             Form dropout = new Form();
-            dropout.Text = "HUD Dropout";
+            dropout.Text = L10NU.GetString("HUD Dropout", "HUD Dropout");
             dropout.Size = new Size(hud1.Width, hud1.Height + 20);
             dropout.Tag = hud1.Parent;
             SubMainLeft.Panel1.Controls.Remove(hud1);
@@ -4803,7 +4803,7 @@ namespace MissionPlanner.GCSViews
         {
             stopRecordToolStripMenuItem_Click(sender, e);
 
-            CustomMessageBox.Show("Output avi will be saved to the log folder");
+            CustomMessageBox.Show(L10NU.GetString("Output avi will be saved to the log folder", "Output avi will be saved to the log folder"));
 
             aviwriter = new AviWriter();
             try
@@ -5262,7 +5262,7 @@ namespace MissionPlanner.GCSViews
                 }
                 catch (Exception ex)
                 {
-                    CustomMessageBox.Show("Camera Fail: " + ex.ToString(), Strings.ERROR);
+                    CustomMessageBox.Show(L10NU.GetString("Camera Fail: ", "Camera Fail: ") + ex.ToString(), Strings.ERROR);
                 }
             }
         }
@@ -6318,7 +6318,7 @@ namespace MissionPlanner.GCSViews
 
             tab.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
 
-            dropout.Text = "Flight DATA";
+            dropout.Text = L10NU.GetString("Flight DATA", "Flight DATA");
             tabControlactions.Controls.Remove(tabQuick);
             tab.Controls.Add(tabQuick);
             tabQuick.BorderStyle = BorderStyle.Fixed3D;
@@ -6672,7 +6672,7 @@ namespace MissionPlanner.GCSViews
             UInt16 tag;
             if (!UInt16.TryParse(tag_str, out tag) || tag < 0 || tag > 0xFFFF)
             {
-                CustomMessageBox.Show("Invalid Tag. Must be a number from 0 to 65535");
+                CustomMessageBox.Show(L10NU.GetString("Invalid Tag. Must be a number from 0 to 65535", "Invalid Tag. Must be a number from 0 to 65535"));
                 // NOTE: This is recursive to automatically re-pop up the dialog box
                 // on input error for as many times as you try to enter an invalid number.
                 jumpToTagToolStripMenuItem_Click(null, null);

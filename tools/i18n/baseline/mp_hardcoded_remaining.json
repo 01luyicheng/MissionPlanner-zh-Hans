@@ -1,100 +1,9 @@
 [
  {
-  "file": "Controls/ElevationProfile.cs",
-  "line": 283,
-  "ctx": ".Text",
-  "s": "Elevation above ground",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 830,
-  "ctx": "MessageBox",
-  "s": "Please select a valid script",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 4806,
-  "ctx": "MessageBox",
-  "s": "Output avi will be saved to the log folder",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 5265,
-  "ctx": "MessageBox",
-  "s": "Camera Fail: ",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 6675,
-  "ctx": "MessageBox",
-  "s": "Invalid Tag. Must be a number from 0 to 65535",
-  "preexisting": true
- },
- {
   "file": "GCSViews/FlightData.cs",
   "line": 360,
   "ctx": ".Text",
   "s": "Auto",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 613,
-  "ctx": ".Text",
-  "s": "Tuning - Double click to change items",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 614,
-  "ctx": ".Text",
-  "s": "Time (s)",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 615,
-  "ctx": ".Text",
-  "s": "Unit",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 3323,
-  "ctx": ".Text",
-  "s": "HUD Dropout",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightData.cs",
-  "line": 6321,
-  "ctx": ".Text",
-  "s": "Flight DATA",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 2609,
-  "ctx": "MessageBox",
-  "s": "Row error",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 4680,
-  "ctx": "MessageBox",
-  "s": "Failed to open url http://127.0.0.1:56781/network.kml",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 5389,
-  "ctx": "MessageBox",
-  "s": "No ripp area defined, ripp displayed on screen?",
   "preexisting": true
  },
  {
@@ -112,136 +21,10 @@
   "preexisting": true
  },
  {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8579,
-  "ctx": "MessageBox",
-  "s": "Failed to make WMS Server request: ",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8599,
-  "ctx": "MessageBox",
-  "s": "Invalid WMS Server response: Invalid number of GetMap elements.",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8617,
-  "ctx": "MessageBox",
-  "s": "Invalid WMS Server response: Server unable to return PNG images.",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8637,
-  "ctx": "MessageBox",
-  "s": "Invalid WMS Server response: Server unable to return EPSG:4326 / WGS84 compatible images.",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8723,
-  "ctx": "MessageBox",
-  "s": "Google Maps Geocoder can't find: '",
-  "preexisting": true
- },
- {
-  "file": "GCSViews/FlightPlanner.cs",
-  "line": 8888,
-  "ctx": "MessageBox",
-  "s": "Number of tiles loaded per zoom : ",
-  "preexisting": true
- },
- {
   "file": "Joystick/JoystickAxis.cs",
   "line": 130,
   "ctx": ".Text",
   "s": "RC",
-  "preexisting": true
- },
- {
-  "file": "Log/LogBrowse.cs",
-  "line": 1023,
-  "ctx": ".Text",
-  "s": "Value Graph",
-  "preexisting": true
- },
- {
-  "file": "Log/LogBrowse.cs",
-  "line": 1024,
-  "ctx": ".Text",
-  "s": "Line Number",
-  "preexisting": true
- },
- {
-  "file": "Log/LogBrowse.cs",
-  "line": 3548,
-  "ctx": ".Text",
-  "s": "Time (sec)",
-  "preexisting": true
- },
- {
-  "file": "Log/LogBrowse.cs",
-  "line": 3560,
-  "ctx": ".Text",
-  "s": "Value Graph",
-  "preexisting": true
- },
- {
-  "file": "Log/LogBrowse.cs",
-  "line": 3561,
-  "ctx": ".Text",
-  "s": "Line Number",
-  "preexisting": true
- },
- {
-  "file": "Log/MavlinkLog.cs",
-  "line": 41,
-  "ctx": ".Text",
-  "s": "Mavlink Log Graph",
-  "preexisting": true
- },
- {
-  "file": "Log/MavlinkLog.cs",
-  "line": 42,
-  "ctx": ".Text",
-  "s": "Time (sec)",
-  "preexisting": true
- },
- {
-  "file": "MainV2.cs",
-  "line": 3729,
-  "ctx": "MessageBox",
-  "s": "Start script failed: ",
-  "preexisting": true
- },
- {
-  "file": "MainV2.cs",
-  "line": 4205,
-  "ctx": "MessageBox",
-  "s": "Invalid command",
-  "preexisting": true
- },
- {
-  "file": "MainV2.cs",
-  "line": 4211,
-  "ctx": "MessageBox",
-  "s": "Done MAV_ACTION_STORAGE_WRITE",
-  "preexisting": true
- },
- {
-  "file": "MainV2.cs",
-  "line": 4460,
-  "ctx": "MessageBox",
-  "s": "Link open failed. check your default webpage association",
-  "preexisting": true
- },
- {
-  "file": "MainV2.cs",
-  "line": 4706,
-  "ctx": "MessageBox",
-  "s": "Failed to open url https://ardupilot.org",
   "preexisting": true
  },
  {
@@ -301,265 +84,6 @@
   "preexisting": true
  },
  {
-  "file": "Program.cs",
-  "line": 109,
-  "ctx": "MessageBox",
-  "s": "Trace started",
-  "preexisting": true
- },
- {
-  "file": "Program.cs",
-  "line": 480,
-  "ctx": "MessageBox",
-  "s": "Please upgrade your mono version to 6+ https://www.mono-project.com/download/stable/",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 935,
-  "ctx": ".Text",
-  "s": "Connecting",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 944,
-  "ctx": ".Text",
-  "s": "Doing Command",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 989,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1006,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1032,
-  "ctx": ".Text",
-  "s": "Done",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1040,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1528,
-  "ctx": ".Text",
-  "s": "Connecting",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1548,
-  "ctx": ".Text",
-  "s": "Doing Command ATI & RTI",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1728,
-  "ctx": ".Text",
-  "s": "Doing Command ATI5",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1849,
-  "ctx": ".Text",
-  "s": "Doing Command RTI5",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1907,
-  "ctx": ".Text",
-  "s": "Done.  Some settings in modem were invalid.",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1911,
-  "ctx": ".Text",
-  "s": "Done",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1922,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 1937,
-  "ctx": ".Text",
-  "s": "Error",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2157,
-  "ctx": ".Text",
-  "s": "Connecting",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2168,
-  "ctx": ".Text",
-  "s": "Doing Command RTI & AT&F",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2174,
-  "ctx": ".Text",
-  "s": "Reset",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2185,
-  "ctx": ".Text",
-  "s": "Doing Command ATI & AT&F",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2191,
-  "ctx": ".Text",
-  "s": "Reset",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2202,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2424,
-  "ctx": ".Text",
-  "s": "Connecting",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2438,
-  "ctx": ".Text",
-  "s": "Doing Command",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2451,
-  "ctx": ".Text",
-  "s": "Done",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2455,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2463,
-  "ctx": ".Text",
-  "s": "Fail",
-  "preexisting": true
- },
- {
-  "file": "Radio/Sikradio.cs",
-  "line": 2623,
-  "ctx": ".Text",
-  "s": "Done.",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 129,
-  "ctx": "MessageBox",
-  "s": "Missing FirmwareHistory.txt file",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 233,
-  "ctx": "MessageBox",
-  "s": "Failed to get Firmware List : ",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 582,
-  "ctx": "MessageBox",
-  "s": "Upload ChibiOS",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 874,
-  "ctx": "MessageBox",
-  "s": "VRBRAIN 4 detected. Please unplug the board, and then press OK and plug back in.\\n",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 1006,
-  "ctx": "MessageBox",
-  "s": "Please connect to ",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 1015,
-  "ctx": "MessageBox",
-  "s": "You don't seem connected to ",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 1020,
-  "ctx": "MessageBox",
-  "s": "You seem connected to ",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 1046,
-  "ctx": "MessageBox",
-  "s": "Please press ",
-  "preexisting": true
- },
- {
-  "file": "Utilities/Firmware.cs",
-  "line": 1051,
-  "ctx": "MessageBox",
-  "s": "Couldn't contact ",
-  "preexisting": true
- },
- {
   "file": "Utilities/Firmware.cs",
   "line": 1471,
   "ctx": "MessageBox",
@@ -567,43 +91,29 @@
   "preexisting": true
  },
  {
-  "file": "Utilities/Update.cs",
-  "line": 706,
-  "ctx": "MessageBox",
-  "s": "Error getting Parameter Information",
-  "preexisting": true
- },
- {
   "file": "Warnings/WarningControl.cs",
-  "line": 48,
+  "line": 49,
   "ctx": ".Text",
   "s": "NoColor",
   "preexisting": true
  },
  {
   "file": "Warnings/WarningControl.cs",
-  "line": 104,
+  "line": 105,
   "ctx": ".Text",
   "s": "gpsstat",
   "preexisting": true
  },
  {
   "file": "Warnings/WarningControl.cs",
-  "line": 114,
+  "line": 115,
   "ctx": ".Text",
   "s": "EQ",
   "preexisting": true
  },
  {
   "file": "Warnings/WarningControl.cs",
-  "line": 185,
-  "ctx": ".Text",
-  "s": "QuickPanel Coloring",
-  "preexisting": true
- },
- {
-  "file": "Warnings/WarningControl.cs",
-  "line": 196,
+  "line": 197,
   "ctx": ".Text",
   "s": "NoColor",
   "preexisting": true

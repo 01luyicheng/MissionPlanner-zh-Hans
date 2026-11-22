@@ -3726,7 +3726,7 @@ namespace MissionPlanner
                         }
                         catch (Exception ex)
                         {
-                            CustomMessageBox.Show("Start script failed: " + ex.ToString(), Strings.ERROR);
+                            CustomMessageBox.Show(L10NU.GetString("Start script failed: ", "Start script failed: ") + ex.ToString(), Strings.ERROR);
                         }
                     });
                 }
@@ -4202,13 +4202,13 @@ namespace MissionPlanner
                 }
                 catch
                 {
-                    CustomMessageBox.Show("Invalid command");
+                    CustomMessageBox.Show(L10NU.GetString("Invalid command", "Invalid command"));
                     return true;
                 }
 
                 //read
                 ///////MainV2.comPort.doCommand(MAVLink09.MAV_CMD.PREFLIGHT_STORAGE, 1.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f, 0.0f);
-                CustomMessageBox.Show("Done MAV_ACTION_STORAGE_WRITE");
+                CustomMessageBox.Show(L10NU.GetString("Done MAV_ACTION_STORAGE_WRITE", "Done MAV_ACTION_STORAGE_WRITE"));
                 return true;
             }
 
@@ -4457,7 +4457,7 @@ namespace MissionPlanner
             }
             catch
             {
-                CustomMessageBox.Show("Link open failed. check your default webpage association");
+                CustomMessageBox.Show(L10NU.GetString("Link open failed. check your default webpage association", "Link open failed. check your default webpage association"));
             }
         }
 
@@ -4703,7 +4703,7 @@ namespace MissionPlanner
             }
             catch
             {
-                CustomMessageBox.Show("Failed to open url https://ardupilot.org");
+                CustomMessageBox.Show(L10NU.GetString("Failed to open url https://ardupilot.org", "Failed to open url https://ardupilot.org"));
             }
         }
 
