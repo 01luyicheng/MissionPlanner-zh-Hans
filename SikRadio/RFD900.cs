@@ -16,7 +16,7 @@ namespace RFD.RFD900
     /// </summary>
     internal static class Localized
     {
-        static string L10N(string key, string defaultTo = null)
+        internal static string L10N(string key, string defaultTo = null)
         {
             if (defaultTo == null)
                 defaultTo = key;
