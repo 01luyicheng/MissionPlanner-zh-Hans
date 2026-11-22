@@ -63,6 +63,11 @@ def parse_resx(path):
     return d
 
 
+def _slash(p):
+    """normalize path separators to '/' for cross-platform baseline compare."""
+    return p.replace("\\", "/")
+
+
 def check_forms():
     """a) visible-entry coverage of translated forms."""
     baseline_forms = load_json("forms.json")
@@ -71,15 +76,19 @@ def check_forms():
         dirs[:] = [d for d in dirs if d not in (".git", "bin", "obj", "packages")]
         for fn in files:
             if fn.endswith(".zh-Hans.resx"):
+                if "resedit" in fn:
+                    continue  # resedit is a dev tool, excluded from the build
                 neu = fn[:-len(".zh-Hans.resx")] + ".resx"
                 if os.path.exists(os.path.join(root_dir, neu)):
-                    pairs.append(os.path.relpath(os.path.join(root_dir, fn), REPO))
-    known = set(pairs) | set(baseline_forms)
-    missing_forms = sorted(set(baseline_forms) - set(pairs))
+                    pairs.append(_slash(os.path.relpath(os.path.join(root_dir, fn), REPO)))
+    known = set(pairs) | set(_slash(p) for p in baseline_forms)
+    missing_forms = sorted(set(_slash(p) for p in baseline_forms) - set(pairs))
     if missing_forms:
         fails.append(f"[forms] baseline zh-Hans resx no longer present: {missing_forms[:10]}")
     bad = 0
     for rel in sorted(known):
+        if "resedit" in rel:
+            continue
         zd = parse_resx(os.path.join(REPO, rel))
         nd = parse_resx(os.path.join(REPO, rel.replace(".zh-Hans.resx", ".resx")))
         if zd is None or nd is None:
@@ -151,9 +160,11 @@ def check_strings_txt():
     if not bom:
         fails.append("[strings] strings_zhHans.txt lost its UTF-8 BOM")
         bad += 1
-    n_cr = raw.count(b"\r")
-    if n_cr:
-        fails.append(f"[strings] strings_zhHans.txt has {n_cr} CR bytes (must stay LF)")
+    # bare CR (not part of CRLF) indicates mixed line endings; a checkout
+    # on Windows may produce CRLF, which is harmless here, but bare CR is not.
+    bare_cr = re.findall(rb"\r(?!\n)", raw)
+    if bare_cr:
+        fails.append(f"[strings] strings_zhHans.txt has bare CR bytes (mixed line endings)")
         bad += 1
     try:
         text = raw.decode("utf-8-sig")
@@ -161,6 +172,8 @@ def check_strings_txt():
         fails.append(f"[strings] strings_zhHans.txt is not valid UTF-8: {e}")
         print(f"[strings] FAIL (invalid UTF-8)")
         return False
+    # normalize any CRLF / CR to LF for line-based parsing (cross-platform)
+    text = text.replace("\r\n", "\n").replace("\r", "\n")
     keys = set()
     for i, line in enumerate(text.split("\n"), 1):
         if not line or line.lstrip().startswith("#"):

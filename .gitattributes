@@ -1,0 +1,3 @@
+# MissionPlanner: keep translation resource files in LF line endings
+ExtLibs/Utilities/Resources/strings_zhHans.txt text eol=lf
+ExtLibs/Utilities/Resources/statustext_zhHans.json text eol=lf
