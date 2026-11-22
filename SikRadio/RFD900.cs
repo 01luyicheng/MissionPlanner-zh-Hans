@@ -8,12 +8,14 @@ using System.Reflection;
 namespace RFD.RFD900
 {
     /// <summary>
-    /// For detecting which mode the modem is in, and putting it in to desired modes.
+    /// Localized lookups for the RFD900 radio forms.
+    /// L10NU lives in the MissionPlanner.Utilities assembly, which the standalone
+    /// SikRadio build does not reference; resolve it by reflection and fall back to
+    /// the English text. Lives at namespace level so every class in this file
+    /// (TSession, RFD900APU, RFD900xux, ...) can use it.
     /// </summary>
-    public class TSession : IDisposable
+    internal static class Localized
     {
-        // L10NU lives in the MissionPlanner.Utilities assembly, which the standalone SikRadio
-        // build does not reference; resolve it by reflection and fall back to the English text.
         static string L10N(string key, string defaultTo = null)
         {
             if (defaultTo == null)
@@ -31,7 +33,13 @@ namespace RFD.RFD900
                 return defaultTo;
             }
         }
+    }
 
+    /// <summary>
+    /// For detecting which mode the modem is in, and putting it in to desired modes.
+    /// </summary>
+    public class TSession : IDisposable
+    {
         TMode _Mode = TMode.INIT;
         MissionPlanner.Comms.ICommsSerial _Port;
         public Uploader.Board Board = Uploader.Board.FAILED;
@@ -2334,7 +2342,7 @@ namespace RFD.RFD900
         {
             while (!TryFirmwareProgrammingOnce(FilePath, Progress))
             {
-                switch (System.Windows.Forms.MessageBox.Show(L10N("Programming firmware failed.  Try again?"), L10N("Programming firmware failed.  Try again?"), System.Windows.Forms.MessageBoxButtons.YesNoCancel))
+                switch (System.Windows.Forms.MessageBox.Show(Localized.L10N("Programming firmware failed.  Try again?"), Localized.L10N("Programming firmware failed.  Try again?"), System.Windows.Forms.MessageBoxButtons.YesNoCancel))
                 {
                     case System.Windows.Forms.DialogResult.Yes:
                         break;
@@ -2510,7 +2518,7 @@ namespace RFD.RFD900
                         }
                         else
                         {
-                            System.Windows.Forms.MessageBox.Show(L10N("The selected firmware is not certified to run on this modem.  Aborting."));
+                            System.Windows.Forms.MessageBox.Show(Localized.L10N("The selected firmware is not certified to run on this modem.  Aborting."));
                             return false;
                         }
                     }
