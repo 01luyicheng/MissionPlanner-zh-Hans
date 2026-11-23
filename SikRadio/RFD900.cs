@@ -14,9 +14,9 @@ namespace RFD.RFD900
     /// the English text. Lives at namespace level so every class in this file
     /// (TSession, RFD900APU, RFD900xux, ...) can use it.
     /// </summary>
-    internal static class Localized
+    public static class Localized
     {
-        internal static string L10N(string key, string defaultTo = null)
+        public static string L10N(string key, string defaultTo = null)
         {
             if (defaultTo == null)
                 defaultTo = key;
